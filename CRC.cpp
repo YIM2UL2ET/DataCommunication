@@ -110,6 +110,8 @@ int main(void) {
     CRC crc(poly);
 
     auto codeWords = crc.ReturnCW(data);
+    codeWords[0][1] = !codeWords[0][1];
+    codeWords[0][2] = !codeWords[0][2];
     
     int cnt = 0, cws = crc.CWSize();
     cout << "data's codeWords : \n";

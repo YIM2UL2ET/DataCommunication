@@ -145,6 +145,11 @@ void Parity2D(void) {
 
     vector <vector <bool>> Parity2D = p.FindCW(data);
 
+    Parity2D[2][2] = !Parity2D[2][2];
+    Parity2D[2][3] = !Parity2D[2][3];
+    Parity2D[3][2] = !Parity2D[3][2];
+    //Parity2D[3][3] = !Parity2D[3][3];
+
     PrintParityMatrix(Parity2D);
     if (p.Inspection(Parity2D)) cout << "Error is nothing\n";
     else cout << "this code word is Error\n";
